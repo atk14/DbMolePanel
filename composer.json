@@ -1,0 +1,23 @@
+{
+        "name": "yarri/dbmole-panel",
+        "type": "library",
+        "description": "A panel for Tracy Debugger with DbMole statistics",
+        "keywords": ["atk14", "dbmole", "tracy"],
+        "homepage": "https://github.com/yarri/DbMolePanel",
+        "license": ["MIT"],
+        "authors": [
+                {
+                        "name": "Jaromir Tomek",
+                        "homepage": "https://github.com/yarri"
+                }
+        ],
+        "require": {
+                "php": ">=5.0.0",
+                 "tracy/tracy": ">=2.2"
+        },
+        "require-dev": {
+        },
+        "autoload": {
+                "classmap": ["src"]
+        }
+}
