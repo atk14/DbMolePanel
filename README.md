@@ -53,5 +53,5 @@ Just use the Composer:
 
 ```
 $ cd path/to/your/atk14/project/
-$ php composer.phar require yarri/dbmole-panel dev-master
+$ php composer.phar require atk14/dbmole-panel dev-master
 ```
