@@ -1,9 +1,9 @@
 {
-        "name": "yarri/dbmole-panel",
+        "name": "atk14/dbmole-panel",
         "type": "library",
         "description": "A panel for Tracy Debugger with DbMole statistics",
         "keywords": ["atk14", "dbmole", "tracy"],
-        "homepage": "https://github.com/yarri/DbMolePanel",
+        "homepage": "https://github.com/atk14/DbMolePanel",
         "license": ["MIT"],
         "authors": [
                 {
