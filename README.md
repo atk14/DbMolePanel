@@ -21,10 +21,12 @@ cd path/to/your/atk14/project/
 composer.phar require atk14/dbmole-panel dev-master
 ```
 
-Now enable the Tracy Debugger.
+Load autoloader from the Composer and enable the Tracy Debugger.
 
 ```php
 // file: lib/load.php
+require(__DIR__."/../vendor/autoload.php");
+
 if(
   !TEST &&
   !$HTTP_REQUEST->xhr() &&
