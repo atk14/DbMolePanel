@@ -1,7 +1,7 @@
 DbMolePanel
 ===========
 
-A panel for Tracy Debugger with DbMole statistics
+A panel for Tracy Debugger with DbMole statistics.
 
 Basic usage
 -----------
@@ -14,7 +14,14 @@ $bar->addPanel(new DbMolePanel($dbmole));
 Usage in an ATK14 application (built upon Atk14Skelet)
 ------------------------------------------------------
 
-First enable Tracy Debugger.
+Use the Composer to install the panel.
+
+```bash
+cd path/to/your/atk14/project/
+composer.phar require atk14/dbmole-panel dev-master
+```
+
+Now enable the Tracy Debugger.
 
 ```php
 // file: lib/load.php
@@ -27,14 +34,14 @@ if(
 }
 ```
 
-Enable collecting DbMole statistics in DEVELOPMENT.
+Enable collecting of the DbMole statistics in DEVELOPMENT.
 
 ```php
 // file: config/settings.php
 define("DBMOLE_COLLECT_STATICTICS",DEVELOPMENT);
 ```
 
-Add DbMole panel to Tracy in \_application_after_filter().
+Add the DbMole panel to the Tracy in \_application_after_filter().
 
 ```php
 // file: app/controllers/application_base.php
@@ -44,14 +51,4 @@ function _application_after_filter(){
     $bar->addPanel(new DbMolePanel($this->dbmole));
   }
 }
-```
-
-Installation
-------------
-
-Just use the Composer:
-
-```
-$ cd path/to/your/atk14/project/
-$ php composer.phar require atk14/dbmole-panel dev-master
 ```
