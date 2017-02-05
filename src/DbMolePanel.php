@@ -31,6 +31,10 @@ class DbMolePanel implements Tracy\IBarPanel{
 	}
 
 	function getPanel(){
+		if(!DBMOLE_COLLECT_STATICTICS){
+			return '<p>Collecting of db queries is disabled.<br>Please enable it by setting the constant DBMOLE_COLLECT_STATICTICS to true.</p>';
+		}
+
 		$out = array();
 		$out[] = '<div style="height: 500px; width: 800px; overflow:scroll;">';
 		$out[] = "<code>";
