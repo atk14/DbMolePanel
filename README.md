@@ -15,7 +15,7 @@ Usage in an ATK14 application (built upon Atk14Skelet)
 Use the Composer to install the panel.
 
     cd path/to/your/atk14/project/
-    composer.phar require atk14/dbmole-panel dev-master
+    composer require atk14/dbmole-panel
 
 Load autoloader from the Composer and enable the Tracy Debugger.
 
