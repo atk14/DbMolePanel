@@ -22,6 +22,7 @@
  *	}
  */
 class DbMolePanel implements Tracy\IBarPanel{
+
 	function __construct($dbmole){
 		$this->dbmole = $dbmole;
 	}
@@ -36,7 +37,7 @@ class DbMolePanel implements Tracy\IBarPanel{
 		}
 
 		$out = array();
-		$out[] = '<div style="height: 500px; width: 800px; overflow:scroll;">';
+		$out[] = '<div style="overflow: auto;">';
 		$out[] = "<code>";
 		$out[] = $this->dbmole->getStatistics();
 		$out[] = "</code>";
