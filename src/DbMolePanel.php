@@ -39,7 +39,7 @@ class DbMolePanel implements Tracy\IBarPanel{
 		$out = array();
 		$out[] = '<div style="overflow: auto;">';
 		$out[] = "<code>";
-		$out[] = $this->dbmole->getStatistics();
+		$out[] = $this->dbmole->getStatistics(array("format" => "html"));
 		$out[] = "</code>";
 		$out[] = '</div>';
 		return join("\n",$out);
