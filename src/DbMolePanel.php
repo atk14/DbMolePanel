@@ -23,6 +23,8 @@
  */
 class DbMolePanel implements Tracy\IBarPanel{
 
+	var $dbmole;
+
 	function __construct($dbmole){
 		$this->dbmole = $dbmole;
 	}
