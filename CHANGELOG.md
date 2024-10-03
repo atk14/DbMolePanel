@@ -3,6 +3,11 @@ Change Log
 
 All notable changes to the DbMolePanel will be documented in this file.
 
+[1.0.2] - 2024-10-03
+--------------------
+
+* 79bebca - Fix for PHP8.3
+
 [1.0.1] - 2024-05-22
 --------------------
 
