@@ -11,11 +11,11 @@
  * Usage in an ATK14 built upon Atk14Skelet:
  *
  *	// file: config/settings.php 
- *	define("DBMOLE_COLLECT_STATICTICS",DEVELOPMENT);
+ *	define("DBMOLE_COLLECT_STATISTICS",DEVELOPMENT);
  *
  *	// file: app/controllers/application_base.php
  *	function _application_after_filter(){
- *		if(DBMOLE_COLLECT_STATICTICS){
+ *		if(DBMOLE_COLLECT_STATISTICS){
  *			$bar = Tracy\Debugger::getBar();
  *			$bar->addPanel(new DbMolePanel($this->dbmole));
  *		}
@@ -34,8 +34,8 @@ class DbMolePanel implements Tracy\IBarPanel{
 	}
 
 	function getPanel(){
-		if(!DBMOLE_COLLECT_STATICTICS){
-			return '<p>Collecting of db queries is disabled.<br>Please enable it by setting the constant DBMOLE_COLLECT_STATICTICS to true.</p>';
+		if(!defined("DBMOLE_COLLECT_STATISTICS") || constant("DBMOLE_COLLECT_STATISTICS")){
+			return '<p>Collecting of db queries is disabled.<br>Please enable it by setting the constant DBMOLE_COLLECT_STATISTICS to true.</p>';
 		}
 
 		$out = array();

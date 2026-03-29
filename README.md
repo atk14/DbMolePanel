@@ -33,13 +33,13 @@ Load autoloader from the Composer and enable the Tracy Debugger.
 Enable collecting of the DbMole statistics in DEVELOPMENT.
 
     // file: config/settings.php
-    define("DBMOLE_COLLECT_STATICTICS",DEVELOPMENT);
+    define("DBMOLE_COLLECT_STATISTICS",DEVELOPMENT);
 
 Add the DbMole panel to the Tracy in \_application_after_filter().
 
     // file: app/controllers/application_base.php
     function _application_after_filter(){
-      if(DBMOLE_COLLECT_STATICTICS){
+      if(DBMOLE_COLLECT_STATISTICS){
         $bar = Tracy\Debugger::getBar();
         $bar->addPanel(new DbMolePanel($this->dbmole));
       }
