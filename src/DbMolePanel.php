@@ -34,7 +34,7 @@ class DbMolePanel implements Tracy\IBarPanel{
 	}
 
 	function getPanel(){
-		if(!defined("DBMOLE_COLLECT_STATISTICS") || constant("DBMOLE_COLLECT_STATISTICS")){
+		if(!defined("DBMOLE_COLLECT_STATISTICS") || !constant("DBMOLE_COLLECT_STATISTICS")){
 			return '<p>Collecting of db queries is disabled.<br>Please enable it by setting the constant DBMOLE_COLLECT_STATISTICS to true.</p>';
 		}
 
