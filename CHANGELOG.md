@@ -7,6 +7,7 @@ All notable changes to the DbMolePanel will be documented in this file.
 --------------------
 
 * ca6db91 - Constant renamed DBMOLE_COLLECT_STATICTICS -> DBMOLE_COLLECT_STATISTICS
+* 690a40f - Fix
 
 [1.0.2] - 2024-10-03
 --------------------
